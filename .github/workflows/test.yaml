@@ -2,7 +2,7 @@ name: "test"
 
 on:
   repository_dispatch:
-    types: [update]
+    types: update
 
 
 jobs:
