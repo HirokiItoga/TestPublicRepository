@@ -8,6 +8,8 @@ on:
 jobs:
   update-manifest:
     runs-on: ubuntu-latest
+    environment: ${{ github.event.client_payload.env }}
+
     timeout-minutes: 300
 
     steps:
@@ -16,5 +18,5 @@ jobs:
       - name: Sample
         run: |
           echo ${{ github.event.client_payload.sha }}
-          echo ${{ github.event.client_payload.env }}
+          echo ${{ secrets.SAMPLE }}
 
